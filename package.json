@@ -1,0 +1,30 @@
+{
+  "name": "monad-blitz-auction",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:web": "cd web && npm run dev",
+    "build:web": "cd web && npm run build",
+    "start:web": "cd web && npm run start",
+    "lint:web": "cd web && npm run lint",
+    "test:contracts": "cd contracts && forge test",
+    "deploy:contracts": "cd contracts && forge script script/Deploy.s.sol:Deploy --rpc-url $MONAD_RPC_URL --private-key $PRIVATE_KEY --broadcast",
+    "dev:analytics": "npx ts-node scripts/analytics-api.ts",
+    "dev:indexer": "npx ts-node scripts/indexer.ts",
+    "dev:agents": "npx ts-node scripts/agent-runner.ts",
+    "setup": "npm install && cd web && npm install"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "concurrently": "^8.2.0",
+    "ethers": "^6.16.0",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "better-sqlite3": "^12.5.0",
+    "cors": "^2.8.5",
+    "express": "^5.2.1"
+  }
+}
