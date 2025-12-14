@@ -1,0 +1,14 @@
+[profile.default]
+src = "contracts/src"
+out = "contracts/out"
+libs = ["contracts/lib"]
+test = "contracts/test"
+script = "contracts/script"
+optimizer = true
+optimizer_runs = 200
+
+[rpc_endpoints]
+monad_testnet = "https://testnet.monad.xyz"
+
+[etherscan]
+monad_testnet = { key = "" }
